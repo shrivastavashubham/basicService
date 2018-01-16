@@ -2,6 +2,8 @@ package com.example.demo.Entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -11,6 +13,7 @@ public class Customer {
 
 	@Id
 	@Column(name="c_id")
+	@GeneratedValue(strategy=GenerationType.TABLE)
 	private long id;
 	
 	@Column(name="first_name")
